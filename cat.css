@@ -1,0 +1,96 @@
+.blue-eyes .eye-color{
+    fill: #583ad4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.btn-cont{
+    margin-bottom: 30px;
+}
+
+.cat-controller{
+    background-color: #275482;
+    outline: none;
+    border-radius: 5px;
+    width: 110px;
+    font-size: 15px;
+    color: #fff;
+    height: 40px;
+}
+
+.sad .mouth{
+    transform-origin: 345px 395px;
+    transform: scale(0.5) rotate(180deg);
+}
+
+.move-around .inner-eye-group{
+    animation: moveEyes 10s infinite;
+}
+
+@keyframes moveEyes {
+    20%{
+        transform: translate(-18px, -10px);
+    }
+    50%{
+        transform: translate(0, 0);
+    }
+    75%{
+        transform: translate(18px, -20px)
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes leftWhiskers {
+    20%{
+        transform: rotate(5deg);
+    }
+
+    60%{
+        transform: rotate(-5deg)
+    }
+}
+
+.move-around .left-whiskers{
+    animation: leftWhiskers 3s infinite;
+    transform-origin: 325px 350px;
+}
+
+@keyframes rightWhiskers {
+    5%{
+        transform: rotate(-2deg);
+    }
+
+    60%{
+        transform: rotate(5deg)
+    }
+}
+
+.move-around .right-whiskers{
+    animation: rightWhiskers 3s infinite;
+    transform-origin: 325px 350px;
+}
+
+@keyframes move {
+    40%{
+        transform: rotateY(5deg) rotateX(20deg)
+    }
+    40%{
+        transform: rotateY(25deg) rotateX(50deg)
+    }
+}
+
+.move-around {
+    animation: move 9s infinite;
+}
+
+.svg-cont{
+    perspective: 1000px;
+}
+
